@@ -1,0 +1,122 @@
+
+/* Reset default margin and padding for body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Scroll container for the pages */
+.scroll-container {
+    /* Allow vertical scrolling */
+    overflow-y: scroll;
+    
+    /* Define the scrolling behavior for the container */
+    scroll-snap-type: y mandatory;
+    
+    /* Optional: Set height to fill the viewport */
+    height: 100vh;
+}
+
+/* Styling for each page section */
+.page {
+    /* Set each page height to fill the viewport */
+    height: 100vh;
+    padding-top: 5vh;
+    /* Apply scroll snap alignment */
+    scroll-snap-align: start end;
+}
+
+/* Fixed footer section */
+#fixed-footer {
+    /* Use fixed positioning */
+    position: fixed;
+    
+    /* Place the section at the bottom of the viewport */
+    bottom: 0;
+    
+    /* Stretch the width to fill the screen */
+    width: 400px;
+    
+    /* Optional: Add background color */
+    
+    /* Optional: Set text color */
+    color: rgb(0, 0, 0);
+    
+    /* Optional: Add text alignment */
+    text-align: left;
+    height: 15vh;
+}
+
+#fixed-footer a {
+    /* Make links block-level elements for full-width links */
+    display: block;
+ 
+    /* Optional: Style links (e.g., text color, decoration) */
+    color: black;
+    text-decoration: none;
+    
+    /* Optional: Add a hover effect */
+    transition: background-color 0.3s ease;
+}
+
+#fixed-footer a:hover, #navbar a:hover {
+    /* Add a background color change on hover */
+    color: green;
+}
+
+/*navbar */
+/* Style the list within the navbar */
+#navbar ul {
+    /* Remove default list styling */
+    list-style: none;
+    
+    /* Remove default padding and margin */
+    padding: 0;
+    margin: 0;
+    height: 15vh;
+}
+
+/* Style the links */
+#navbar a {
+    /* Make links block-level elements for full-width links */
+    display: block;
+ 
+    /* Optional: Style links (e.g., text color, decoration) */
+    color: black;
+    text-decoration: none;
+    
+    /* Optional: Add a hover effect */
+    transition: background-color 0.3s ease;
+    padding: 5px 0px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns:  1fr 400px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+}
+    
+.content { 
+        grid-area: 1 / 1 / 6 / 2; 
+        height: 100vh;
+        position: fixed;
+}
+.description { grid-area: 1 / 2/ 6 / 2; }
+
+#home{
+    margin-top: 60vh;
+    height: 20vh;
+    margin-right: 5vh;
+}
+
+.linktohome{
+   margin-top:65vh;
+   height: 80vh;
+}
+
+#copyright{
+    bottom: 2px;
+}
